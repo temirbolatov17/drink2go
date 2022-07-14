@@ -1,0 +1,14 @@
+@mixin montserrat ($font-size, $line-height, $font-weight) {
+  font-family: 'Montserrat', 'Arial', sans-serif, ;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin montserrat-uppercase ($font-size, $line-height, $font-weight) {
+  font-family: 'Montserrat', 'Arial', sans-serif, ;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  text-transform: uppercase;
+}

@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+
+  &__logo {
+    text-decoration: none;
+    order: 1;
+  }
+
+  &__logo-img {
+    @media (min-width: $tablet-width) {
+      width: 82px;
+      height: 36px;
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    border: none;
+    align-self: center;
+    position: relative;
+    background-color: $white-base;
+    margin-left: -20px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
