@@ -1,0 +1,143 @@
+
+.form {
+  &__range-filter {
+    width: 280px;
+
+
+    @media (min-width: 768px) {
+
+    }
+    @media (min-width: 1440px) {
+      margin-top: 15px;
+      width: 320px;
+    }
+  }
+
+  &__range-controls {
+    position: relative;
+    height: 25px;
+    margin-bottom: 10px;
+    padding-top: 9px;
+
+    & .form__scale {
+      height: 2px;
+      background: $light-grey;
+    }
+
+    & .form__bar {
+      width: 90%;
+      height: 4px;
+      background: $primary-lighter;
+    }
+
+    & .form__toggle {
+      position: absolute;
+      top: -3px;
+      left: 0;
+      width: 21px;
+      height: 21px;
+      padding: 0;
+      border: 2px solid $primary-lighter;
+      background-color: $white-base;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &:hover .form__toggle {
+      background-color: $primary-opacity;
+      width: 21px;
+      height: 21px;
+    }
+
+    &:active .form__toggle {
+      background-color: $primary-base;
+      width: 21px;
+      height: 21px;
+    }
+
+    & .form__toggle--min {
+      left: 0px;
+    }
+
+    & .form__toggle--max {
+      left: 240px;
+      @media (min-width: 768px) {
+        left: 180px;
+      }
+      @media (min-width: 1440px) {
+        left: 270px;
+      }
+    }
+  }
+
+  &__price-controls {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__min-price {
+    position: relative;
+  }
+
+  &__title {
+    @include montserrat(16px, 24px, 600);
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    border: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1/2;
+    }
+  }
+
+  &__stocks {
+    border: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+  }
+
+  &__country {
+    border: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+  }
+}
+
+.form__min-price::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  right: -15%;
+  width: 10px;
+  height: 2px;
+  background: $grey-base;
+}
+
+.form__price-controls input {
+  box-sizing: border-box;
+  width: 125px;
+  padding: 8px 10px;
+  text-align: center;
+  color: $black-base;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  background: $white-base;
+  @include montserrat(16px, 24px, 500);
+  margin: 0;
+
+  @media (min-width: 768px) {
+    width: 98px;
+  }
+  @media (min-width: 1440px) {
+    width: 135px;
+  }
+}
+
+.form__price-controls:focus input {
+  border-color: $primary-darker;
+}

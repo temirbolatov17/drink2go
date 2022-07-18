@@ -1,0 +1,97 @@
+.user-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  width: 180px;
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 261px;
+    gap: 25px;
+  }
+
+  &__text {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+      @include montserrat-uppercase(12px, 16px, 500);
+
+      text-transform: uppercase;
+      color: $black-base;
+
+    }
+  }
+
+  &__item {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    @media (min-width: $tablet-width) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 120px;
+      text-decoration: none;
+    }
+
+    &:hover span {
+      color: $primary-base;
+    }
+
+    &:hover path {
+      fill: $primary-base;
+    }
+  }
+
+  &__toggle {
+    border: none;
+    background: none;
+    background-image: url("../img/button-open.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 21px;
+    height: 20px;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__toggle--close {
+    border: none;
+    background: none;
+    background-image: url("../img/button-close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
+    width: 21px;
+    height: 20px;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__toggle-off-js {
+    display: none;
+  }
+
+
+
+  &__item:focus {
+    color: $primary-base;
+  }
+}

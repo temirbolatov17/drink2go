@@ -1,14 +1,39 @@
 .header {
-  display: flex;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
 
   &__logo {
     text-decoration: none;
-    order: 1;
+    width: 32px;
+    height: 36px;
+    margin-right: 80px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 67px;
+      width: 82px;
+      height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 20px;
+      width: 170px;
+      height: 36px;
+    }
   }
 
   &__logo-img {
+
     @media (min-width: $tablet-width) {
       width: 82px;
+      height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 170px;
       height: 36px;
     }
   }
@@ -18,22 +43,9 @@
 
     @media (min-width: $desktop-width) {
       display: block;
-    }
-  }
-
-  &__toggle {
-    display: block;
-    width: 24px;
-    height: 16px;
-    cursor: pointer;
-    border: none;
-    align-self: center;
-    position: relative;
-    background-color: $white-base;
-    margin-left: -20px;
-
-    @media (min-width: $tablet-width) {
-      display: none;
+      color: $black-base;
+      @include montserrat(12px, 16px, 400);
+      margin-right: 162px;
     }
   }
 }

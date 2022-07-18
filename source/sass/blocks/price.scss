@@ -1,0 +1,31 @@
+.price {
+  text-align: center;
+
+  &__old {
+    @include montserrat(16px, 32px, 400);
+    color: $primary-base;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  &__sale {
+    @include montserrat(20px, 32px, 600);
+    color: $black-base;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+
+  &__button {
+    border: none;
+    border-radius: 4px;
+    background-color: $primary-base;
+    color: $white-base;
+    padding: 8px 20px;
+    @include montserrat(16px, 24px, 400);
+    margin-bottom: 60px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 20px;
+    }
+  }
+}

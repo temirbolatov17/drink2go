@@ -1,0 +1,72 @@
+.stocks {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    @include montserrat(16px, 24px, 400);
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    & input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &:hover input ~ .checkmark {
+      background-color: $primary-opacity;
+    }
+
+    & input:checked ~ .checkmark {
+      background-color: $white-base;
+      border: 2px solid $primary-base;
+    }
+
+    & input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    & .checkmark:after {
+      top: 4px;
+      left: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: $primary-base;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: $white-base;
+  border: 2px solid $grey-base;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}

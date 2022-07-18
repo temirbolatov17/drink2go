@@ -1,0 +1,61 @@
+.pagination {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    min-width: 40px;
+    height: 40px;
+    padding: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: $white-base;
+    border-radius: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $primary-base;
+    @include montserrat(16px, 24px, 400);
+
+    &--arrow-back {
+      position: relative;
+    }
+
+    &--arrow-next {
+      position: relative;
+    }
+
+    &--arrow-back::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: -6px;
+      width: 10px;
+      height: 10px;
+      background-image: url(../../img/arrow-back.svg);
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    &--arrow-next::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: -4px;
+      width: 10px;
+      height: 10px;
+      background-image: url(../../img/arrow-next.svg);
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+}

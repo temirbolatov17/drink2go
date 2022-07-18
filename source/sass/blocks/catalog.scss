@@ -1,0 +1,53 @@
+.catalog {
+  background-color: $lightest-grey;
+  padding: 50px 0 60px 0;
+
+  // @media (min-width: $tablet-width) {
+  //   display: grid;
+  //   grid-template-columns: 1fr;
+  //   grid-template-rows: 1fr 1fr;
+  // }
+
+  &__form {
+    background-color: $lightest-grey;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+    }
+
+    & fieldset {
+      @media (min-width: $tablet-width) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include montserrat(24px, 36px, 700);
+    margin: 0px auto 20px auto;
+    color: $black-base;
+
+    @media (min-width: $tablet-width) {
+      @include montserrat(42px, 64px, 700)
+    }
+  }
+
+  &__button-reset {
+    width: 280px;
+    @include montserrat(16px, 24px, 400);
+    border: none;
+    padding: 8px 0;
+    color: $primary-base;
+    margin-bottom: 40px;
+    background-color: $white-base;
+
+    @media (min-width: $tablet-width) {
+      width: 222px;
+      grid-column: 1 / -1;
+      justify-content: center;
+    }
+  }
+}

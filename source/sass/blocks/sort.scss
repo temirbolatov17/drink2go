@@ -1,0 +1,21 @@
+.sort {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
+
+  &__title {
+    @include montserrat(16px, 24px, 600);
+    color: $black-base;
+    margin-right: 8px;
+  }
+
+  &__select {
+    @include montserrat(16px, 24px, 600);
+    color: $primary-base;
+    margin-right: 10px;
+  }
+}

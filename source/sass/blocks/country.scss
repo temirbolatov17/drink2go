@@ -1,0 +1,55 @@
+.country {
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__switch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include montserrat(16px, 24px, 400);
+
+    & input[type="checkbox"] {
+      position: relative;
+      width: 42px;
+      height: 24px;
+      margin: 0 12px 0 0;
+      -webkit-appearance: none;
+      outline: none;
+      background: $grey-base;
+      border-radius: 12px;
+      transition: .5s;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    }
+
+    & input:checked[type="checkbox"] {
+      background: $primary-base;
+    }
+
+    & input[type="checkbox"]::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      background: $white-base;
+      transition: .5s;
+      transform: scale(1.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    }
+
+    & input:checked[type="checkbox"]::before {
+      left: 20px;
+    }
+  }
+
+}

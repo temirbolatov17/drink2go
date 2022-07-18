@@ -1,0 +1,16 @@
+.slider {
+  background-color: $flat-white;
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    background: linear-gradient(180deg, rgba(243,235,225,1) 75%, rgba(255,255,255,1) 75%);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 84px;
+    background: none;
+    background-color: $flat-white;
+  }
+}
